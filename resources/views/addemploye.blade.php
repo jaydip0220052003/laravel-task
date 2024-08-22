@@ -40,16 +40,16 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Quick Example</h3>
                                 </div>
-                                <form action="{{}}" method="post">
+                                <form action="{{url('addemployep')}}" method="post">
                                     @csrf
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Name</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" name="name" value='{{$edit->name}}' placeholder="Enter Name">
+                                            <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="Enter Name">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" name="email" value="{{$edit->email}}" placeholder="Enter email">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email">
                                         </div>
                                               <!-- select -->
                                               <div class="form-group">
@@ -62,7 +62,7 @@
                                               </div>
                                               <div class="form-group">
                                                 <label for="exampleInputEmail1">Salary</label>
-                                                <input type="text" class="form-control" id="exampleInputEmail1" name="salary" value='{{$edit->salary}}' placeholder="Enter Name">
+                                                <input type="text" class="form-control" id="exampleInputEmail1" name="salary" placeholder="Enter Name">
                                             </div>
                                     </div>
                                     

@@ -14,6 +14,9 @@ Route::post('adminp','App\Http\Controllers\adminlogin@adminpp');
 Route::get('home','App\Http\Controllers\adminlogin@home')->name('home');
 Route::get('employelist','App\Http\Controllers\adminlogin@employelist')->name('employelist');
 
+Route::get('addemploye','App\Http\Controllers\adminlogin@addemploye')->name('addemploye');
+Route::post('addemployep','App\Http\Controllers\adminlogin@addemploye2');
+
 Route::get('edit/{id}','App\Http\Controllers\adminlogin@edits')->name('edit');
 Route::patch('updatep/{id}','App\Http\Controllers\adminlogin@update')->name('update');
 

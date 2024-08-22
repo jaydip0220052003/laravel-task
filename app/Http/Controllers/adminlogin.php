@@ -106,4 +106,29 @@ class adminlogin extends Controller
             return redirect('admin');
         }
     }
+    public function addemploye()
+    {
+        
+        $sid = Session::get('id');
+        if (Session::has('id'))
+        {
+            return view('addemploye');
+        }
+        else{
+            return redirect('admin');
+        }
+    }
+    public function addemploye2(Request $request)
+    {
+        $pin=new Employe
+        ([
+            'name'=>$request->get('name'),
+            'email'=>$request->get('name'),
+            'department_id'=>$request->get('dep'),
+            'salary'=>$request->get('salary'),
+        ]);
+        $pin->save();
+        // dd($pin);
+        return redirect('employelist');
+    }
 }
